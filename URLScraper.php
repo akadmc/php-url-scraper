@@ -30,6 +30,9 @@
  *
  * @author Bert Maurau
  */
+
+namespace AkaDMC\URLScraper;
+
 class URLScraper
 {
 
