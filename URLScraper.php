@@ -67,7 +67,7 @@ class URLScraper
     public static $description;
 
     /**
-     * Will hold the URL for the image
+     * Will hold the URL for the imagee
      * @var string
      */
     public static $image;
