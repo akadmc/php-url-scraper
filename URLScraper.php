@@ -118,7 +118,7 @@ class URLScraper
         self::$contents = curl_exec($ch);
 
         // Record the final URL in case of redirect
-        self::$url_final = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        self::$url_final = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
 
         curl_close($ch);
 
