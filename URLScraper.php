@@ -43,6 +43,12 @@ class URLScraper
     public static $url;
 
     /**
+     * The final (possibly redirected) URL
+     * @var string
+     */
+    public static $url_final;
+
+    /**
      * The domain that the URL is hosted on
      * @var string
      */
@@ -110,6 +116,9 @@ class URLScraper
 
         // Fetch the contents
         self::$contents = curl_exec($ch);
+
+        // Record the final URL in case of redirect
+        self::$url_final = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
         curl_close($ch);
 
@@ -233,6 +242,7 @@ class URLScraper
         // Return everything
         return array(
             'url'         => self::$url,
+            'url_final'   => self::$url_final,
             'domain'      => self::$domain,
             'title'       => self::$title,
             'description' => self::$description,
@@ -241,5 +251,4 @@ class URLScraper
             'tags_og'     => self::$tags_og
         );
     }
-
 }
