@@ -1,0 +1,12 @@
+{
+  "name": "aka-dmc/php-url-scraper",
+  "description": "Simple PHP URL Scraper",
+  "require": {
+    "php": "^7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "AkaDMC\\URLScraper\\": "/"
+    }
+  }
+}
