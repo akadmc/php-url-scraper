@@ -26,7 +26,7 @@
  */
 
 /**
- * Description of URLScraper
+ * Description of URLScraper x
  *
  * @author Bert Maurau
  */
